@@ -2,7 +2,7 @@ FROM gradle:6.3.0-jdk8 AS builder
 RUN mkdir /app
 WORKDIR /app
 COPY . .
-RUN ./gradlew clean assemble
+RUN gradle clean assemble
 
 FROM adoptopenjdk/openjdk13-openj9:jdk-13.0.2_8_openj9-0.18.0-alpine-slim
 COPY --from=builder /app/build/libs/kotlin-githubactions-sample-*-all.jar kotlin-githubactions-sample.jar
