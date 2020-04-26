@@ -9,5 +9,5 @@ import io.micronaut.http.annotation.Produces
 class HelloController {
     @Get("/")
     @Produces(MediaType.TEXT_PLAIN)
-    fun getHelloWorld() = "Hello World"
+    fun getHelloWorld() = "Hello World - Nice to meet you"
 }
