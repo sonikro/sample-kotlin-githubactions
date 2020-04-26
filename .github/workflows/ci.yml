@@ -22,11 +22,11 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Assemble
-      run: ./gradlew assemble
+      run: gradle assemble
 
     # Runs a set of commands using the runners shell
     - name: Test
-      run: ./gradlew test
+      run: gradle test
       
     - name: SonarCloud Scan
       uses: SonarSource/sonarcloud-github-action@v1.1
